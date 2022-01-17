@@ -1,0 +1,26 @@
+<div class="bg-white dark:bg-neutral-900 flex flex-col h-screen">
+    <div class="flex justify-end content-end">
+        <div class="items-center justify-center mt-4 mr-4">
+            <label for="toggle" class="flex items-center cursor-pointer">
+                <!-- toggle -->
+                <div class="relative">
+                    <!-- input -->
+                    <input type="checkbox" [checked]="checked" (change)="onThemePreferenceSelected($event)" id="toggle" class="sr-only">
+                    <!-- line -->
+                    <div class="block bg-gray-600 w-14 h-8 rounded-full"></div>
+                    <!-- dot -->
+                    <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+                </div>
+                <!-- label -->
+                <div class="ml-3 font-outfit-bold font-medium" [class.text-gray-700]="theme === 'dark'" [class.text-gray-200]="theme === 'dark'">
+                    Dark Mode
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="container flex items-center justify-center gap-5 mx-auto rounded-xl bg-neutral-800 dark:bg-teal-500 m-5">
+        <div><img [src]="logo" width="200px" height="200px" class="p-10" alt=""></div>
+        <div class="text-5xl text-white font-outfit-bold">WHERE ARE MY GAMES?</div>
+    </div>
+</div>
